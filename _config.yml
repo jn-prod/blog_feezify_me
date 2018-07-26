@@ -3,14 +3,15 @@ name: "Feezify.me"
 description: "Optimisez votre récupération physique et psychologique."
 meta_description: "Application de gestion d'entrainement sportif: Running - Trail - Triathlon - Cyclisme - VTT - Randonnée - Marche. Feezify.me"
 meta_keywords: "entrainement, carnet d'entrainement, suivi d'entrainement, running, course à pied, cyclisme, natation, vtt, entrainement, entrainement running, entrainement course à pied, entrainement cyclisme, entrainement natation, entrainement vtt"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: 'assets/images/brand/logo.png'
+
 # baseurl: 
 google_analytics: 'UA-119879264-1'
 disqus: 'randovttbretagne'
 facebookpage_id: 502710249769535
 facebook_article_author: 10210003510697734
 facebook_article_publisher: https://www.facebook.com/app.vtt.bzh
+google_verification: 
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 
@@ -20,7 +21,7 @@ permalink: /:title:output_ext
 authors:
   nicolas:
     name: Nicolas
-    display_name: Nicolas
+    display_name: "Nicolas Jouanno"
     avatar: https://miro.medium.com/fit/c/240/240/1*Tysig6P_3bP56CAs-TsxNA.png
     email: nicolas@feezify.me
     web: https://www.linkedin.com/in/nicolasjouanno/

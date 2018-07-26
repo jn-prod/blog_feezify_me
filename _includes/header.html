@@ -1,0 +1,72 @@
+<header>
+    <!-- Begin Menu Navigation
+    ================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mediumnavigation nav-down">
+        <div class="container pr-0">    
+            <!-- Begin Logo -->
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <!-- Site Title
+                ================================================== -->
+                <div class="mainheading">
+                    <span class=" h1 sitetitle">{{ site.name }}</span>
+                    <p class="lead">
+                         {{ site.description }}
+                    </p>
+                </div>
+
+            <!-- <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}"> -->
+            </a>
+            <!-- End Logo -->
+          
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMediumish">
+                <!-- Begin Menu -->
+                <ul class="navbar-nav ml-auto">
+                    
+                    {% if page.url == "/" %}
+                        <li class="nav-item active">
+                    {% else %}
+                        <li class="nav-item">
+                    {% endif %}
+                    <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://app.feezify.me" rel="nofollow">Application</a>
+                    </li>
+                    
+    <!--                 <li class="nav-item">
+                    <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a target="_blank" class="nav-link" href="https://www.facebook.com/wowthemesnet/"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="https://twitter.com/wowthemesnet"><i class="fab fa-twitter"></i></a>
+                    </li> -->
+                    
+                    {% if page.url == "/about.html" %}
+                        <li class="nav-item active">
+                    {% else %}
+                        <li class="nav-item">
+                    {% endif %}
+                    <a class="nav-link" href="{{ site.baseurl }}/about">A propos</a>
+                    </li>
+                    
+                </ul>
+                <!-- End Menu -->
+            </div>
+        </div>
+    </nav>    
+<!-- End Navigation
+================================================== -->    
+</header>
