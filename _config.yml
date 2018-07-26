@@ -1,7 +1,7 @@
 # Site
 name: "Feezify.me"
-description: "Optimisez votre récupération physique et psychologique."
-meta_description: "Application de gestion d'entrainement sportif: Running - Trail - Triathlon - Cyclisme - VTT - Randonnée - Marche. Feezify.me"
+description: "Feezify.me c'est une application et un blog pour vous aider à optimisez votre récupération physique et mentale."
+meta_description: "Le blog pour vous aider à optimisez votre récupération physique et mentale: Running - Trail - Triathlon - Cyclisme - VTT - Randonnée - Marche. Feezify.me"
 meta_keywords: "entrainement, carnet d'entrainement, suivi d'entrainement, running, course à pied, cyclisme, natation, vtt, entrainement, entrainement running, entrainement course à pied, entrainement cyclisme, entrainement natation, entrainement vtt"
 logo: 'assets/images/brand/logo.png'
 
@@ -28,7 +28,7 @@ authors:
     twitter: https://twitter.com/nicolasjouanno
     twitter_creator: "@nicolasjouanno"
     twitter_site: "@VTT_bzh"
-    description: "A great Product is better than Marketing | 🚀 | addict: #sport #startup 💼 | skills: #webdevelopment #productManagement #growthHacking 👾"
+    description: "Ancien cycliste professionnel, je suis maintenant un vrai touche à tout: cyclisme bien sûr, mais aussi running, natation, surf, fitness, randonnée, triathlon et bien d'autres. Chaque sport m'apporte énormément sur les plans: physique, mental et humain. Abonne toi à ma newsletter pour en savoir plus."
     google_plus: https://plus.google.com/u/0/101743465600034380035
     mediumcom_creator : "https://medium.com/@nicolasjouanno"
 

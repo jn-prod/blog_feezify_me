@@ -2,7 +2,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{{ page.title }} | {{site.name}}</title>
+    {% if page.title %}
+        <title>{{ page.title }} | {{site.name}}</title>
+    {% else %}
+        <title>{{site.name}}</title>
+    {% endif %}
+    
     <meta name="title" content="{{ page.title }} | {{site.name}}">
 
     <meta name="description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">    
