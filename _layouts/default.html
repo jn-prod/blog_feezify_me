@@ -11,10 +11,10 @@
             <meta property="og:description" content="{{ page.description }}">
             <meta name="twitter:description" content="{{ page.description }}">
         {% endif %} 
-        <meta name="keywords" content="CYCLING, OUTDOORS">
+        <meta name="keywords" content="{{ site.meta_keywords }}">
 
         <!-- icon -->
-        <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png"> 
+        <link rel="icon" href="{{ site.url }}/assets/images/logo.png"> 
 
         <!-- bootstrap-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -43,51 +43,85 @@
         {% endif %}
 
         <!-- rss -->
-        <link id="feedLink" rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.feezify.me/feed.xml">
+        <link id="feedLink" rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.url }}/feed.xml">
 
         <!-- SEO -->
+        <meta content="index, follow">
         <meta name="referrer" content="always">
         <meta name="theme-color" content="#000000">
-        <meta property="og:title" content="{{ page.title }} | {{site.name}}">
-        <meta property="og:site_name" content="{{ site.name }}">
-        <link rel="publisher" href="https://plus.google.com/u/0/101743465600034380035">
-        <meta property="og:type" content="article">
+
+        <!-- twitter card-->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:creator" content="@NicolasJouanno">
-        <meta name="twitter:site" content="@VTT_bzh">
+        <meta name="twitter:creator" content="{{ site.authors.nicolas.twitter_creator }}">
+        <meta name="twitter:site" content="{{ site.authors.nicolas.twitter_site }}">
+        <meta name="twitter:image:src" content="{{ site.url }}/{{ page.image }}">
+        <meta name="twitter:title" content="{{ page.title }} | {{site.name}}">
         
-        <meta name="twitter:app:name:iphone" content="{{ site.name }}">
-        <meta name="twitter:app:id:iphone" content="828256236">
-        <meta name="twitter:app:url:iphone" content="{{ site.baseurl }}">
-        <meta property="al:ios:app_name" content="{{ site.name }}">
+        <!-- google card-->
+        <meta property="og:title" content="{{ page.title }} | {{site.name}}">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="{{ site.url }}/{{ page.image }}">
+        <meta property="og:url" content="{{ site.url }}/{{ page.url }}">
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:site_name" content="{{ site.name }}">
+        <link rel="publisher" href="{{ site.authors.nicolas.google_plus }}">
+        
+        
+        <!-- facebook card -->
+<!--         <meta property="al:ios:app_name" content="{{ site.name }}">
         <meta property="al:android:app_name" content="{{ site.name }}">
         <meta property="al:ios:url" content="{{ site.baseurl }}">
         <meta property="al:android:url" content="{{ site.baseurl }}">
-
-        <!-- MEDIUM META IMPORT -->
-        
-        <meta property="og:url" content="https://blog.vtt.bzh/suspension-5-points-pour-r%C3%A9gler-la-fourche-et-lamortisseur-de-son-vtt-162b9a939ac0">
-        <meta property="og:image" content="https://cdn-images-1.medium.com/max/1200/1*IZH8pH7QKO26x3nZFOjTEA.jpeg">
-        <meta property="fb:app_id" content="542599432471018">
-        <meta name="twitter:image:src" content="https://cdn-images-1.medium.com/max/1200/1*IZH8pH7QKO26x3nZFOjTEA.jpeg">
-        <meta property="medium-com:creator" content="https://blog.vtt.bzh/@nicolasjouanno">
         <meta property="al:ios:app_store_id" content="828256236">
         <meta property="al:android:package" content="com.medium.reader">
-        <meta property="al:web:url" content="https://blog.vtt.bzh/suspension-5-points-pour-r%C3%A9gler-la-fourche-et-lamortisseur-de-son-vtt-162b9a939ac0">
+        <meta property="al:web:url" content="{{ page.url }}">
+        <meta property="fb:app_id" content="542599432471018"> -->
+        <meta property="fb:app_id"content="{{ site.facebookpage_id }}" /> 
+        <meta property="article:author" content="{{ site.facebook_article_author }}">
+        <meta property="article:publisher" content="{{ site.facebook_article_publisher }}">
+        <meta property="article:published_time" content="{{ page.date }}">
 
+        <!-- medium card -->
+        <meta property="medium-com:creator" content="{{site.authors.nicolas.mediumcom_creator}}">
 
-        <link rel="icon" href="https://cdn-static-1.medium.com/_/fp/icons/favicon-rebrand-medium.3Y6xpZ-0FSdWDnPM3hSBIA.ico" class="js-favicon">
-        <link rel="apple-touch-icon" sizes="152x152" href="https://cdn-images-1.medium.com/fit/c/152/152/1*IZH8pH7QKO26x3nZFOjTEA.jpeg">
-        <link rel="apple-touch-icon" sizes="120x120" href="https://cdn-images-1.medium.com/fit/c/120/120/1*IZH8pH7QKO26x3nZFOjTEA.jpeg">
-        <link rel="apple-touch-icon" sizes="76x76" href="https://cdn-images-1.medium.com/fit/c/76/76/1*IZH8pH7QKO26x3nZFOjTEA.jpeg">
-        <link rel="apple-touch-icon" sizes="60x60" href="https://cdn-images-1.medium.com/fit/c/60/60/1*IZH8pH7QKO26x3nZFOjTEA.jpeg">
-        <link rel="mask-icon" href="https://cdn-static-1.medium.com/_/fp/icons/monogram-mask.KPLCSFEZviQN0jQ7veN2RQ.svg" color="#171717">
-        <meta content="index, follow">
-        <meta property="article:author" content="10210003510697734">
-        <meta property="article:publisher" content="https://www.facebook.com/app.vtt.bzh">
-        <meta property="article:published_time" content="2017-02-14T07:48:53.000Z">
-
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"NewsArticle","image":{"@type":"ImageObject","width":780,"height":520,"url":"https://cdn-images-1.medium.com/max/780/0*y1PsiewCTqe8xR-M.jpg"},"url":"https://blog.vtt.bzh/suspension-5-points-pour-r%C3%A9gler-la-fourche-et-lamortisseur-de-son-vtt-162b9a939ac0","dateCreated":"2017-02-14T07:48:53.000Z","datePublished":"2017-02-14T07:48:53.000Z","dateModified":"2018-05-21T17:39:52.143Z","headline":"SUSPENSION: 5 points pour régler la fourche et l’amortisseur de son VTT","name":"SUSPENSION: 5 points pour régler la fourche et l’amortisseur de son VTT","thumbnailUrl":"https://cdn-images-1.medium.com/max/780/0*y1PsiewCTqe8xR-M.jpg","keywords":["Tag:Le Blog","Tag:Matos","Tag:Amortisseur","Tag:Fourche","Publication:vtt-bzh","LockedPostSource:0","Elevated:false","LayerCake:0"],"author":{"@type":"Person","name":"Nicolas Jouanno","url":"https://blog.vtt.bzh/@nicolasjouanno"},"creator":["Nicolas Jouanno"],"publisher":{"@type":"Organization","name":"VTT.bzh","url":"https://blog.vtt.bzh","logo":{"@type":"ImageObject","width":60,"height":60,"url":"https://cdn-images-1.medium.com/max/60/1*IZH8pH7QKO26x3nZFOjTEA.jpeg"}},"mainEntityOfPage":"https://blog.vtt.bzh/suspension-5-points-pour-r%C3%A9gler-la-fourche-et-lamortisseur-de-son-vtt-162b9a939ac0"}</script>
+        <script type="application/ld+json">
+            {
+                "@context":"http://schema.org",
+                "@type":"NewsArticle",
+                "image":{
+                    "@type":"ImageObject",
+                    "width":780,
+                    "height":520,
+                    "url":"{{ site.url }}/{{ page.image }}"
+                },
+                "url":"{{ site.url }}/{{ page.url }}",
+                "dateCreated":"{{ page.date }}",
+                "datePublished":"{{ page.date }}",
+                "dateModified":"{{ page.date }}",
+                "headline":"{{ page.title }}",
+                "name":"{{ page.title }}",
+                "thumbnailUrl":"{{ site.url }}/{{ page.image }}",
+                "keywords":[{{ site.meta_keywords }}],
+                "author":{
+                    "@type":"Person",
+                    "name":"Nicolas Jouanno",
+                    "url":"{{site.authors.nicolas.mediumcom_creator}}"
+                },
+                "creator":["Nicolas Jouanno"],
+                "publisher":{
+                    "@type":"Organization",
+                    "name":"{{ site.name }}",
+                    "url":"{{ page.url }}",
+                    "logo":{
+                        "@type":"ImageObject",
+                        "width":60,
+                        "height":60,
+                        "url":"{{ site.url }}/{{ page.image }}"
+                    }
+                },
+                "mainEntityOfPage":"{{ site.url }}/{{ page.url }}"
+            }
+        </script>
 
     </head>
         
@@ -110,7 +144,7 @@
             <!-- Site Title
             ================================================== -->
             <div class="mainheading">
-                <h1 class="sitetitle">{{ site.name }}</h1>
+                <span class=" h1 sitetitle">{{ site.name }}</span>
                 <p class="lead">
                      {{ site.description }}
                 </p>
@@ -209,7 +243,7 @@
     <div class="jumbotron fortags">
     	<div class="row">
     		<div class="col-md-4 align-self-center text-center">
-    			<h2 class="d-md-block d-none">Explore →</h2>
+    			<span class="h2 d-md-block d-none">Explore →</span>
     		</div>
     		<div class="col-md-8 align-self-center text-center">
               {% assign tags_list = site.categories %}  

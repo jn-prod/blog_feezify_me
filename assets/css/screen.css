@@ -222,7 +222,7 @@ License: https://www.wowthemes.net/freebies-license/
      max-height:30px;
      margin-right:5px;
 }
- .mainheading h1.sitetitle {
+ .mainheading span.sitetitle {
      font-family:Righteous;
 }
  .mainheading h1.posttitle {
@@ -600,7 +600,7 @@ License: https://www.wowthemes.net/freebies-license/
          padding-left:0;
          padding-top:13%;
     }
-     .jumbotron.fortags .col-md-4 h2 {
+     .jumbotron.fortags .col-md-4 span {
          font-weight:300;
     }
      .jumbotron.fortags .row {

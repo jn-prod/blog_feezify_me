@@ -1,8 +1,9 @@
 # Jekyll Template - Mediumish by WowThemes.net
 
-[Live Demo](https://wowthemesnet.github.io/mediumish-theme-jekyll/) &nbsp; | &nbsp; [Download](https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip)
+### Commandes
 
-![mediumish](assets/images/mediumish-jekyll-template.png)
+- install bundler jekyll
+- bundle exec jekyll serve --watch
 
 ### Features
 

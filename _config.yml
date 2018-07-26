@@ -2,11 +2,15 @@
 name: "Feezify.me"
 description: "Optimisez votre récupération physique et psychologique."
 meta_description: "Application de gestion d'entrainement sportif: Running - Trail - Triathlon - Cyclisme - VTT - Randonnée - Marche. Feezify.me"
+meta_keywords: "entrainement, carnet d'entrainement, suivi d'entrainement, running, course à pied, cyclisme, natation, vtt, entrainement, entrainement running, entrainement course à pied, entrainement cyclisme, entrainement natation, entrainement vtt"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 # baseurl: 
 google_analytics: 'UA-119879264-1'
-disqus: 'vtt_bzh'
+disqus: 'randovttbretagne'
+facebookpage_id: 502710249769535
+facebook_article_author: 10210003510697734
+facebook_article_publisher: https://www.facebook.com/app.vtt.bzh
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 
 
@@ -21,7 +25,11 @@ authors:
     email: nicolas@feezify.me
     web: https://www.linkedin.com/in/nicolasjouanno/
     twitter: https://twitter.com/nicolasjouanno
+    twitter_creator: "@nicolasjouanno"
+    twitter_site: "@VTT_bzh"
     description: "A great Product is better than Marketing | 🚀 | addict: #sport #startup 💼 | skills: #webdevelopment #productManagement #growthHacking 👾"
+    google_plus: https://plus.google.com/u/0/101743465600034380035
+    mediumcom_creator : "https://medium.com/@nicolasjouanno"
 
 # Plugins
 plugins: 
@@ -37,7 +45,7 @@ jekyll-archives:
     category: '/category/:name/'
     
 # Pagination 
-paginate: 6
+paginate: 12
 paginate_path: /page:num/
     
 # Other
