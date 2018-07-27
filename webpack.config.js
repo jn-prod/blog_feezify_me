@@ -6,11 +6,11 @@ let config, cssConfig
 if (!env) {
   // DEVELOPPEMENT CONFIG
   config = require('./webpack-config/dev')
-  cssConfig = ['style-loader', 'css-loader', 'resolve-url-loader']
+  cssConfig = ['style-loader',{ loader: 'css-loader', options: { importLoaders: 1 } }, 'file-loader']
 } else {
   // PRODUCTION CONFIG
   config = require('./webpack-config/prod')
-  cssConfig = [MiniCssExtractPlugin.loader, 'css-loader', 'resolve-url-loader']
+  cssConfig = [ MiniCssExtractPlugin.loader, 'css-loader', 'file-loader']
 }
 
 config.module = {
@@ -34,6 +34,10 @@ config.module = {
       use: [
         'file-loader'
       ]
+    },
+    {
+      test: /\.(eot|svg|ttf|woff|woff2)$/,
+      loader: 'file?name=public/fonts/[name].[ext]'
     },
     {
       test: /\.(scss|css)$/,

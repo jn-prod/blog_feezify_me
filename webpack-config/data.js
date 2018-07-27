@@ -5,11 +5,13 @@ module.exports = {
     mode: 'development',
     entry: path.resolve(__dirname, '../assets/src/js/main.js'),
     output: {
-      path: path.resolve('public/'),
+      path: path.resolve('assets/public/'),
       sourceMapFilename: '[file].map',
       filename: 'app.js',
       publicPath: '/'
-    }
+    },
+    devtool: true,
+    watch: 'cheap-module-eval-source-map'
   },
   prod: {
     mode: 'production',
