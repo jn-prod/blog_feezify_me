@@ -1,12 +1,12 @@
 # Site
 name: "Feezify.me"
-description: "Feezify.me c'est une application et un blog pour vous aider à optimisez votre récupération physique et mentale."
+description: "Optimisez votre récupération physique et mentale."
 meta_description: "Le blog pour vous aider à optimisez votre récupération physique et mentale: Running - Trail - Triathlon - Cyclisme - VTT - Randonnée - Marche. Feezify.me"
 meta_keywords: "entrainement, carnet d'entrainement, suivi d'entrainement, running, course à pied, cyclisme, natation, vtt, entrainement, entrainement running, entrainement course à pied, entrainement cyclisme, entrainement natation, entrainement vtt"
 logo: 'assets/images/brand/logo.png'
 
 # baseurl: 
-google_analytics: 'UA-119879264-1'
+google_analytics: 'UA-37450504-1'
 disqus: 'randovttbretagne'
 facebookpage_id: 502710249769535
 facebook_article_author: 10210003510697734
