@@ -37,6 +37,7 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
   - jekyll-sitemap
+  # - jekyll-minifier
     
 # Archives
 jekyll-archives:
@@ -45,6 +46,10 @@ jekyll-archives:
   layout: archive
   permalinks:
     category: '/category/:name/'
+
+# Minification
+# jekyll-minifier:
+#   exclude: 'feed.xml'
     
 # Pagination 
 paginate: 12
