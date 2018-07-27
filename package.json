@@ -1,0 +1,60 @@
+{
+  "name": "blog_feezify_me",
+  "version": "1.0.0",
+  "description": "feezify frontend optimisation\u001b[D\u001b[D\u001b[D\u001b[D\u001b[z",
+  "main": "app.js",
+  "scripts": {
+    "webpack": "./node_modules/.bin/webpack",
+    "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
+    "dev": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "set NODE_ENV=production&& webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jn-prod/blog_feezify_me.git"
+  },
+  "author": "nicolas jouanno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jn-prod/blog_feezify_me/issues"
+  },
+  "homepage": "https://github.com/jn-prod/blog_feezify_me#readme",
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-loader": "*",
+    "babel-preset-env": "*",
+    "bootstrap": "*",
+    "clean-webpack-plugin": "*",
+    "css-loader": "^0.28.11",
+    "eslint": "*",
+    "eslint-config-standard": "*",
+    "eslint-loader": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-node": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-standard": "*",
+    "file-loader": "^1.1.11",
+    "google-maps": "*",
+    "html-webpack-plugin": "*",
+    "jquery": "*",
+    "mini-css-extract-plugin": "^0.4.0",
+    "popper.js": "*",
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "*",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-middleware": "*",
+    "webpack-dev-server": "*",
+    "webpack-hot-middleware": "*"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}

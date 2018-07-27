@@ -3,7 +3,9 @@
 ### Commandes
 
 - install bundler jekyll
-- bundle exec jekyll serve --watch
+- npm run pretest
+- npm run dev bundle exec jekyll serve --watch
+- npm run build bundle exec jekyll serve --watch
 
 ### Features
 
@@ -41,7 +43,7 @@
 - YAML front matter
     - featured post - <code>featured:true</code>
     - exclude featured post from "All stories" loop to avoid duplicated posts - <code>hidden:true</code>
-    - post image - <code>image: assets/images/mypic.jpg</code>
+    - post image - <code>image: assets/public/images/mypic.jpg</code>
     - page comments - <code>comments:true</code>
     - meta description (optional) - <code>description: "this is my meta description"</code>
     
@@ -52,7 +54,7 @@ layout: post
 title:  "We all wait for summer"
 author: john
 categories: [ Jekyll, tutorial ]
-image: assets/images/5.jpg
+image: assets/public/images/5.jpg
 featured: true
 ---
 </pre>
