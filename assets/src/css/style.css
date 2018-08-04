@@ -14,10 +14,12 @@ License: https://www.wowthemes.net/freebies-license/
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900');
 
+/*
 @font-face {
   font-family: 'impact';
   src: url('../fonts/Maximum_Impact.ttf') format('truetype')
 }
+*/
 
  .mainheading {
      padding:1rem 0rem;
@@ -238,7 +240,7 @@ License: https://www.wowthemes.net/freebies-license/
      margin-right:5px;
 }
  .mainheading span.sitetitle {
-    font-family: impact, sans-serif;
+    font-family: Maximum_Impact, sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     color: #00908e;

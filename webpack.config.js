@@ -6,11 +6,11 @@ let config, cssConfig
 if (!env) {
   // DEVELOPPEMENT CONFIG
   config = require('./webpack-config/dev')
-  cssConfig = ['style-loader',{ loader: 'css-loader', options: { importLoaders: 1 } }, 'file-loader']
+  cssConfig = ['style-loader','css-loader'] //, 'file-loader'
 } else {
   // PRODUCTION CONFIG
   config = require('./webpack-config/prod')
-  cssConfig = [ MiniCssExtractPlugin.loader, 'css-loader', 'file-loader']
+  cssConfig = [ MiniCssExtractPlugin.loader, 'css-loader'] //, 'file-loader'
 }
 
 config.module = {
