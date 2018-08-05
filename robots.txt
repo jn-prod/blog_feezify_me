@@ -1,4 +1,8 @@
+---
+layout: null
+---
+
 User-agent : *
 Allow : /
 
-Sitemap : https://blog.feezify.me/sitemap.xml
+Sitemap: {{ site.url }}/sitemap.xml
