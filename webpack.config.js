@@ -1,28 +1,30 @@
 const env = (process.env.NODE_ENV === 'production')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-let config, cssConfig
+let config
+let cssConfig = []
 
 if (!env) {
   // DEVELOPPEMENT CONFIG
   config = require('./webpack-config/dev')
-  cssConfig = ['style-loader'] //, 'file-loader'
+  cssConfig.push('style-loader')
 } else {
   // PRODUCTION CONFIG
   config = require('./webpack-config/prod')
-  cssConfig = [ MiniCssExtractPlugin.loader] //, 'file-loader'
 }
 
 cssConfig.push(
   {
-    loader: 'file-loader',
-    options: {
-      name: '[name].[ext]',
-      outputPath: 'css/'
-    }
+    loader: MiniCssExtractPlugin.loader,
   },
-  'css-loader',
-  'sass-loader'
+  {
+    loader: 'css-loader',
+    options: {
+      url: false,
+      minimize: true,
+      sourceMap: true
+    }
+  }
 )
 
 config.module = {
@@ -52,6 +54,10 @@ config.module = {
       }]
     },
     {
+      test: /\.(css|scss)$/,
+      use: cssConfig
+    },
+    {
       test: /\.(eot|ttf|woff|woff2)$/,
       use: [{
         loader: 'file-loader',
@@ -60,12 +66,14 @@ config.module = {
           outputPath: 'fonts/'
         }
       }]
-    },
-    {
-      test: /\.(css|scss)$/,
-      use: cssConfig
     }
   ]
 }
+
+config.plugins.push(
+  new MiniCssExtractPlugin({
+    filename: "[name].css"
+  })
+)
 
 module.exports = config

@@ -1,25 +1,7 @@
-/* 
-Template Name: Mediumish 
-Copyright: Sal, WowThemes.net, https://www.wowthemes.net 
-Version: 1.0.2 
-License: https://www.wowthemes.net/freebies-license/ 
-*/
-
-/*COLORS*/
-/*https://flatuicolors.com/palette/nl*/
-/*Main: #00b4b1 Secondary: #f9e093 Default: #00908e */
-
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Anton');
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900');
-
-/*
 @font-face {
   font-family: 'impact';
-  src: url('../fonts/Maximum_Impact.ttf') format('truetype')
+  src: url('../fonts/Maximum_Impact.ttf') format('truetype');
 }
-*/
 
  .mainheading {
      padding:1rem 0rem;
@@ -612,7 +594,7 @@ License: https://www.wowthemes.net/freebies-license/
          padding:0;
          height:350px;
          border-radius:0;
-         background-image: url(../images/jumbotron.jpg);
+         background-image: url(./images/jumbotron.jpg);
          background-size:cover;
     }
      .jumbotron.fortags .col-md-4 {
