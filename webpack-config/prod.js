@@ -8,6 +8,18 @@ let config = {
     path: data.output.path,
     filename: data.output.filename
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.(css|scss)$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
+  },  
   plugins: [
     new webpack.ProvidePlugin({
       jQuery: 'jquery',

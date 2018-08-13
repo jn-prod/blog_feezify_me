@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const path = require("path")
 var data = require('./data').dev
 
 let config = {
@@ -28,7 +29,15 @@ let config = {
       'window.jQuery': 'jquery',
       Popper: ['popper.js', 'default']
     })
-  ]
+  ],
+  devServer: {
+    contentBase: path.resolve(__dirname, "./assets/public"),
+    historyApiFallback: true,
+    inline: true,
+    open: true,
+    hot: true
+  },
+  devtool: "eval-source-map"
 }
 
 module.exports = config

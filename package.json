@@ -6,7 +6,8 @@
   "scripts": {
     "webpack": "./node_modules/.bin/webpack",
     "pretest": "./node_modules/.bin/eslint --ignore-path .eslintignore .",
-    "dev": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "start": "webpack-dev-server -d --hot --config webpack.config.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "set NODE_ENV=production&& webpack --config webpack.config.js"
   },
@@ -54,7 +55,7 @@
     "webpack": "^4.16.5",
     "webpack-cli": "^2.1.4",
     "webpack-dev-middleware": "*",
-    "webpack-dev-server": "*",
+    "webpack-dev-server": "^3.1.5",
     "webpack-hot-middleware": "*"
   },
   "dependencies": {

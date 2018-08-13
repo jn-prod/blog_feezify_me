@@ -1,5 +1,6 @@
 const env = (process.env.NODE_ENV === 'production')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 let config
 let cssConfig = []
@@ -73,7 +74,12 @@ config.module = {
 config.plugins.push(
   new MiniCssExtractPlugin({
     filename: "[name].css"
-  })
+  }),
+  new UglifyJsPlugin()
 )
+
+if (env) {
+  config.plugins.push(new UglifyJsPlugin())
+} 
 
 module.exports = config

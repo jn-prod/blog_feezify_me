@@ -17,8 +17,8 @@ module.exports = {
     mode: 'production',
     entry: path.resolve(__dirname, '../assets/src/js/main.js'),
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'foo.bundle.js'
+      path: path.resolve(__dirname, 'assets/public/'),
+      filename: 'app.js'
     }
   }
 }
