@@ -6,12 +6,24 @@ let config, cssConfig
 if (!env) {
   // DEVELOPPEMENT CONFIG
   config = require('./webpack-config/dev')
-  cssConfig = ['style-loader','css-loader'] //, 'file-loader'
+  cssConfig = ['style-loader'] //, 'file-loader'
 } else {
   // PRODUCTION CONFIG
   config = require('./webpack-config/prod')
-  cssConfig = [ MiniCssExtractPlugin.loader, 'css-loader'] //, 'file-loader'
+  cssConfig = [ MiniCssExtractPlugin.loader] //, 'file-loader'
 }
+
+cssConfig.push(
+  {
+    loader: 'file-loader',
+    options: {
+      name: '[name].[ext]',
+      outputPath: 'css/'
+    }
+  },
+  'css-loader',
+  'sass-loader'
+)
 
 config.module = {
   rules: [
@@ -31,16 +43,26 @@ config.module = {
     },
     {
       test: /\.(png|svg|jpg|gif)$/,
-      use: [
-        'file-loader'
-      ]
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'images/'
+        }
+      }]
     },
     {
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
-      loader: 'file?name=public/fonts/[name].[ext]'
+      test: /\.(eot|ttf|woff|woff2)$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/'
+        }
+      }]
     },
     {
-      test: /\.(scss|css)$/,
+      test: /\.(css|scss)$/,
       use: cssConfig
     }
   ]

@@ -93,7 +93,18 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("\nvar content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--8-1!../../../node_modules/file-loader/dist/cjs.js!./style.css */ \"./node_modules/css-loader/index.js?!./node_modules/file-loader/dist/cjs.js!./assets/src/css/style.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./assets/src/css/style.css?");
+eval("\nvar content = __webpack_require__(/*! !../../../node_modules/file-loader/dist/cjs.js??ref--8-1!../../../node_modules/css-loader!../../../node_modules/sass-loader/lib/loader.js!./style.css */ \"./node_modules/file-loader/dist/cjs.js?!./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./assets/src/css/style.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./assets/src/css/style.css?");
+
+/***/ }),
+
+/***/ "./assets/src/fonts/Maximum_Impact.ttf":
+/*!*********************************************!*\
+  !*** ./assets/src/fonts/Maximum_Impact.ttf ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"fonts/Maximum_Impact.ttf\";\n\n//# sourceURL=webpack:///./assets/src/fonts/Maximum_Impact.ttf?");
 
 /***/ }),
 
@@ -117,18 +128,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ../css/style.css */ \"./assets/src/css/style.css\");\n\n__webpack_require__(/*! ./components/mediumish */ \"./assets/src/js/components/mediumish.js\");\n\n//# sourceURL=webpack:///./assets/src/js/main.js?");
+eval("\n\n__webpack_require__(/*! ../css/style.css */ \"./assets/src/css/style.css\");\n\n__webpack_require__(/*! ../fonts/Maximum_Impact.ttf */ \"./assets/src/fonts/Maximum_Impact.ttf\");\n\n__webpack_require__(/*! ./components/mediumish */ \"./assets/src/js/components/mediumish.js\");\n\n//# sourceURL=webpack:///./assets/src/js/main.js?");
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/file-loader/dist/cjs.js!./assets/src/css/style.css":
-/*!*************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--8-1!./node_modules/file-loader/dist/cjs.js!./assets/src/css/style.css ***!
-  \*************************************************************************************************************/
+/***/ "./node_modules/file-loader/dist/cjs.js?!./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./assets/src/css/style.css":
+/*!******************************************************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js??ref--8-1!./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./assets/src/css/style.css ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/css-loader/index.js):\\nUnknown word (1:1)\\n\\n> 1 | module.exports = __webpack_public_path__ + \\\"c8446b0d595a938b06ef90feac947989.css\\\";\\n    | ^\\n\");\n\n//# sourceURL=webpack:///./assets/src/css/style.css?./node_modules/css-loader??ref--8-1!./node_modules/file-loader/dist/cjs.js");
+eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/lib/loader.js):\\nError: Cannot find module 'node-sass'\\n    at Function.Module._resolveFilename (module.js:485:15)\\n    at Function.Module._load (module.js:437:25)\\n    at Module.require (module.js:513:17)\\n    at require (/Users/nico-j-56/Google Drive/03-SIDE PROJECT/02-FEEZIFY.ME/00-GITHUB/sportbook/blog_feezify_me/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)\\n    at Object.sassLoader (/Users/nico-j-56/Google Drive/03-SIDE PROJECT/02-FEEZIFY.ME/00-GITHUB/sportbook/blog_feezify_me/node_modules/sass-loader/lib/loader.js:46:72)\");\n\n//# sourceURL=webpack:///./assets/src/css/style.css?./node_modules/file-loader/dist/cjs.js??ref--8-1!./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
