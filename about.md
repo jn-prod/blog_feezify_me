@@ -6,7 +6,7 @@ comments: true
 
 This website is built with Jekyll and Mediumish template for Jekyll. It is meant for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github. This page in example shows a page layout.
 
-![jekyll template mediumish]({{site.baseurl}}/assets/images/mediumish-jekyll-template.png){: .shadow}
+![jekyll template mediumish]({{site.baseurl}}/assets/public/images/mediumish-jekyll-template.png){: .shadow}
 
 ### Features
 
@@ -49,7 +49,7 @@ Download or Fork *Mediumish for Jekyll*.
 - YAML front matter
     - featured post - <code>featured:true</code>
     - exclude featured post from "All stories" loop to avoid duplicated posts - <code>hidden:true</code>
-    - post image - <code>image: assets/images/mypic.jpg</code>
+    - post image - <code>image: assets/public/images/mypic.jpg</code>
     - page comments - <code>comments:true</code>
     - meta description (optional) - <code>description: "this is my meta description"</code>
     
@@ -60,7 +60,7 @@ layout: post
 title:  "We all wait for summer"
 author: john
 categories: [ Jekyll, tutorial ]
-image: assets/images/5.jpg
+image: assets/public/images/5.jpg
 featured: true
 ---
 </pre>

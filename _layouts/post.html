@@ -7,7 +7,7 @@ post_class: post-template
 
 <!-- Begin Article
 ================================================== -->
-<article>
+<article itemscope itemtype="http://schema.org/BlogPosting" itemref="author_box review_box">
     <div class="container">
     	<div class="row">
 
@@ -37,8 +37,10 @@ post_class: post-template
                         {% endif %}
                         
                         <!-- Post Title -->
-                        <h1 class="posttitle">{{ page.title }}</h1> 
-                        
+                        <header>
+                            <h1 class="posttitle">{{ page.title }}</h1> 
+                        </header>
+
                     </div>
 
                     <!-- Post Featured Image -->
@@ -46,36 +48,38 @@ post_class: post-template
                     <!-- End Featured Image -->
 
                     <!-- Post Content -->
-                    <div class="article-post">
+                    <div class="article-post" itemprop="articleBody">>
                         {{content}}
                     </div>
 
-                    <!-- Post Date -->
-                    <p>
-                    <small>
-                        <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
-                        {% if page.last_modified_at %}
-                        (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
-                        {% endif %}
-                        </small>
-                    </p>
-                    
-                    <!-- Post Categories -->
-                    <div class="after-post-tags">
-                        <ul class="tags">
-                            {% assign sortedCategories = page.categories | sort %}
-                            {% for category in sortedCategories %}
-                            <li>
-                             <a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <!-- End Categories -->
-                    
-                    <!-- Prev/Next -->
-                    {% include footer-nav.html %}
-                    <!-- End Categories -->
+                    <footer>
+                        <!-- Post Date -->
+                        <p>
+                        <small>
+                            <span class="post-date"><time class="post-date" itemprop="date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                            {% if page.last_modified_at %}
+                            (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+                            {% endif %}
+                            </small>
+                        </p>
+                        
+                        <!-- Post Categories -->
+                        <div class="after-post-tags">
+                            <ul class="tags">
+                                {% assign sortedCategories = page.categories | sort %}
+                                {% for category in sortedCategories %}
+                                <li>
+                                 <a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- End Categories -->
+                        
+                        <!-- Prev/Next -->
+                        {% include footer-nav.html %}
+                        <!-- End Categories -->
+                    </footer>
                 </section>
             </div>
             <!-- End Post -->   
