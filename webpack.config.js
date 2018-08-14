@@ -1,15 +1,21 @@
 const env = (process.env.NODE_ENV === 'production')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const webpack = require('webpack')
 
 let config
 let cssConfig = []
 
+
+
+// global config
 if (!env) {
+  console.log('dev mode')
   // DEVELOPPEMENT CONFIG
   config = require('./webpack-config/dev')
   cssConfig.push('style-loader')
 } else {
+  console.log('prod mode')
   // PRODUCTION CONFIG
   config = require('./webpack-config/prod')
 }
@@ -28,13 +34,14 @@ cssConfig.push(
   }
 )
 
+// global loader config
 config.module = {
   rules: [
     {
       enforce: 'pre',
       test: /\.js?$/,
       exclude: /node_modules/,
-      use: ['eslint-loader']
+      use: ['babel-loader', 'eslint-loader']
     },
     {
       test: /\.jsx?$/,
@@ -71,15 +78,19 @@ config.module = {
   ]
 }
 
+// global plugins config
 config.plugins.push(
+  new webpack.ProvidePlugin({
+    jQuery: 'jquery',
+    $: 'jquery',
+    jquery: 'jquery',
+    'window.jQuery': 'jquery',
+    Popper: ['popper.js', 'default']
+  }),
   new MiniCssExtractPlugin({
     filename: "[name].css"
   }),
-  new UglifyJsPlugin()
+  new CleanWebpackPlugin(['assets/public/app.js', 'assets/public/main.css', 'assets/public/fonts']),
 )
-
-if (env) {
-  config.plugins.push(new UglifyJsPlugin())
-} 
 
 module.exports = config

@@ -4,8 +4,8 @@
 
 - install bundler jekyll
 - npm run pretest
-- npm run start bundle exec jekyll serve --watch
-- npm run build bundle exec jekyll serve --watch
+- npm run build
+- bundle exec jekyll serve --watch
 
 ### Features
 

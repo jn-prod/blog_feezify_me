@@ -1,5 +1,5 @@
-const webpack = require('webpack')
 var data = require('./data').prod
+const MinifyPlugin = require("babel-minify-webpack-plugin")
 
 let config = {
   mode: data.mode,
@@ -8,27 +8,14 @@ let config = {
     path: data.output.path,
     filename: data.output.filename
   },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: 'styles',
-          test: /\.(css|scss)$/,
-          chunks: 'all',
-          enforce: true
-        }
-      }
-    }
-  },  
   plugins: [
-    new webpack.ProvidePlugin({
-      jQuery: 'jquery',
-      $: 'jquery',
-      jquery: 'jquery',
-      'window.jQuery': 'jquery',
-      Popper: ['popper.js', 'default']
-    })
-  ]
+    new MinifyPlugin()
+  ],
+  optimization: {
+    // minimizer: [    ]
+  },
+  devtool: data.devtool,
+  watch: data.watch
 }
 
 module.exports = config
