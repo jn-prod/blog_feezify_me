@@ -1,4 +1,11 @@
 <head>
+
+    <!-- redirection -->
+    {% if post.new_url %}
+        <meta http-equiv="refresh" content="0; url={{ post.new_url }}">
+        <link rel="canonical" href="{{ post.new_url }}" />
+    {% endif %}
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,7 +63,11 @@
     {% if site.google_verification %}
       <meta name="google-site-verification" content="{{ site.google_verification }}" />
     {% endif %}
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% if post.new_url %}
+        <link rel="canonical" href="{{ post.new_url }}" />
+    {% else %}
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% endif %}
     <meta name="author" content="{{ site.authors.nicolas.display_name }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
