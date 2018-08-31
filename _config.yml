@@ -1,4 +1,5 @@
 # Site
+encoding: utf-8
 name: "Feezify.me"
 description: "Optimisez votre récupération physique et mentale."
 meta_description: "Le blog pour vous aider à optimisez votre récupération physique et mentale: Running - Trail - Triathlon - Cyclisme - VTT - Randonnée - Marche. Feezify.me"
@@ -37,6 +38,7 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
   - jekyll-sitemap
+  - jekyll-redirect-from
   # - jekyll-minifier
     
 # Archives
