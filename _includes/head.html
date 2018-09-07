@@ -1,9 +1,4 @@
 <head>
-    {% if post.redirect_to %}
-        <!-- redirection -->
-        
-    {% endif %}
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -61,10 +56,10 @@
     {% if site.google_verification %}
       <meta name="google-site-verification" content="{{ site.google_verification }}" />
     {% endif %}
-    {% if post.redirect_to %}
+    {% if page.redirect_to %}
         <!-- redirection -->
-        <meta http-equiv="refresh" content="0; url={{ post.redirect_to }}">
-        <link rel="canonical" href="{{ post.redirect_to }}" />
+        <meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
+        <link rel="canonical" href="{{ page.redirect_to }}" />
     {% else %}
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
