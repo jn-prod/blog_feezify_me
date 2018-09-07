@@ -1,9 +1,7 @@
 <head>
-
-    <!-- redirection -->
-    {% if post.new_url %}
-        <meta http-equiv="refresh" content="0; url={{ post.new_url }}">
-        <link rel="canonical" href="{{ post.new_url }}" />
+    {% if post.redirect_to %}
+        <!-- redirection -->
+        
     {% endif %}
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -63,8 +61,10 @@
     {% if site.google_verification %}
       <meta name="google-site-verification" content="{{ site.google_verification }}" />
     {% endif %}
-    {% if post.new_url %}
-        <link rel="canonical" href="{{ post.new_url }}" />
+    {% if post.redirect_to %}
+        <!-- redirection -->
+        <meta http-equiv="refresh" content="0; url={{ post.redirect_to }}">
+        <link rel="canonical" href="{{ post.redirect_to }}" />
     {% else %}
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
