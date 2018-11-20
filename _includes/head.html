@@ -8,8 +8,10 @@
         <title>{{site.name}}</title>
     {% endif %}
 
+    <!-- redirection -->
     {% if page.url == '/index.html' %}
-        <!-- redirection -->
+        <meta http-equiv="refresh" content="0; url=https://blog.nicolasjouanno.com">
+    {% elseif page.url == '/' %}  
         <meta http-equiv="refresh" content="0; url=https://blog.nicolasjouanno.com">
     {% endif %}
     
